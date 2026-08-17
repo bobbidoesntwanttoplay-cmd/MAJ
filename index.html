@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>✨MY FUCKING PLACE✨</title>
+    <title>✨MY FUCKING SPACE✨</title>
     <!-- Nhập font Pixel chuẩn từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
@@ -11,16 +11,8 @@
         }
 
         body {
-            /* Nền xanh Tiffany chuẩn cho toàn bộ trang */
+            /* Nền xanh Tiffany chuẩn tuyệt đối */
             background-color: #0abab5;
-            
-            /* Gọi file ảnh đã tách nền vào 4 góc màn hình */
-            background-image: url('download-removebg-preview.png'), url('download-removebg-preview.png'), url('download-removebg-preview.png'), url('download-removebg-preview.png');
-            background-position: top left, top right, bottom left, bottom right;
-            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-            background-size: 380px auto;
-            background-attachment: fixed;
-            
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -28,8 +20,24 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         
+        /* Ghim các thẻ ảnh hoa văn vào đúng 4 góc màn hình */
+        .corner-img {
+            position: fixed;
+            width: 350px; /* Kích thước hoa văn ở mỗi góc */
+            height: auto;
+            pointer-events: none; /* Không cản trở click chuột */
+            z-index: 1; /* Nằm trên nền xanh nhưng dưới hộp chữ */
+            mix-blend-mode: multiply; /* Hòa trộn để tự động lọc bỏ nền trắng, giữ lại nét hoa văn đen */
+        }
+        
+        .top-left { top: 0; left: 0; }
+        .top-right { top: 0; right: 0; transform: scaleX(-1); } /* Lật đối xứng góc phải */
+        .bottom-left { bottom: 0; left: 0; transform: scaleY(-1); } /* Lật đối xứng góc dưới */
+        .bottom-right { bottom: 0; right: 0; transform: scale(-1, -1); } /* Lật chéo góc */
+
         /* Hộp chứa nội dung chính ở giữa */
         .container {
             background-color: #fff8e7; /* Màu kem retro */
@@ -39,7 +47,7 @@
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
-            z-index: 10;
+            z-index: 10; /* Nằm trên cùng để bấm được nút */
         }
         
         h1 { 
@@ -72,6 +80,12 @@
     </style>
 </head>
 <body>
+    <!-- Dùng trực tiếp file ảnh gốc hoặc file bạn vừa tải lên đều được, CSS 'mix-blend-mode: multiply' sẽ tự khử nền trắng -->
+    <img src="download-removebg-preview.png" class="corner-img top-left" alt="">
+    <img src="download-removebg-preview.png" class="corner-img top-right" alt="">
+    <img src="download-removebg-preview.png" class="corner-img bottom-left" alt="">
+    <img src="download-removebg-preview.png" class="corner-img bottom-right" alt="">
+
     <div class="container">
         <h1>✨ MY CHAOS PLACE ✨</h1>
         <div>
