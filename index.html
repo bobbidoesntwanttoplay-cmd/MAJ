@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>✨MY FUCKING BLOG✨</title>
+    <title>✨MY FUCKING PLACE✨</title>
     <!-- Nhập font Pixel chuẩn từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
@@ -11,43 +11,33 @@
         }
 
         body {
-            /* Nền xanh Tiffany chuẩn tuyệt đối cho toàn trang */
+            /* 🌟 PHẦN QUAN TRỌNG: Nền xanh Tiffany và 4 góc hoa văn */
             background-color: #0abab5;
+            
+            /* Chỉ định 4 ảnh riêng biệt cho 4 góc */
+            background-image: url('download.jfif'), url('download.jfif'), url('download.jfif'), url('download.jfif');
+            
+            /* Căn chỉnh vị trí: top-left, top-right, bottom-left, bottom-right */
+            background-position: top left, top right, bottom left, bottom right;
+            
+            /* Không lặp lại ảnh */
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            
+            /* Kích thước hoa văn ở mỗi góc (tùy chỉnh cho vừa vặn) */
+            background-size: 380px auto;
+            
+            /* Cố định nền khi cuộn trang */
+            background-attachment: fixed;
+            
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            position: relative;
+            overflow: hidden; /* Tránh cuộn thừa */
         }
         
-        /* Lớp phủ để làm tối nhẹ nền xanh, giúp hộp nội dung nổi hơn */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1); /* Phủ đen 10% */
-            z-index: -1;
-        }
-        
-        /* Đặt các góc hoa văn cố định ở 4 góc màn hình */
-        .corner-decor {
-            position: fixed;
-            width: 400px; /* Điều chỉnh kích thước hoa văn ở góc cho phù hợp */
-            pointer-events: none; /* Không cản trở click chuột */
-            z-index: 1;
-        }
-        
-        .top-left { top: 0; left: 0; }
-        .top-right { top: 0; right: 0; transform: scaleX(-1); } /* Lật đối xứng cho đẹp */
-        .bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
-        .bottom-right { bottom: 0; right: 0; transform: scale(-1, -1); }
-
         /* Hộp chứa nội dung chính ở giữa */
         .container {
             background-color: #fff8e7; /* Màu kem retro */
@@ -57,12 +47,12 @@
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
-            z-index: 10; /* Nằm trên lớp hoa văn */
+            z-index: 10; /* Đảm bảo hộp nội dung luôn nổi trên hoa văn */
         }
         
         h1 { 
             color: #4a2e15;
-            text-shadow: 2px 2px #0abab5;
+            text-shadow: 2px 2px #0abab5; /* Bóng đổ màu xanh Tiffany */
             font-size: 18px;
             margin-top: 0;
             margin-bottom: 25px;
@@ -80,6 +70,7 @@
             border-radius: 6px;
             font-size: 9px;
             text-transform: uppercase;
+            transition: all 0.3s;
         }
         
         .btn-folder:hover {
@@ -90,12 +81,6 @@
     </style>
 </head>
 <body>
-    <!-- 4 góc hoa văn được ghim chặt, nằm dưới lớp nội dung -->
-    <img src="download.jfif" class="corner-decor top-left" alt="">
-    <img src="download.jfif" class="corner-decor top-right" alt="">
-    <img src="download.jfif" class="corner-decor bottom-left" alt="">
-    <img src="download.jfif" class="corner-decor bottom-right" alt="">
-
     <div class="container">
         <h1>✨ mY cHAoS plAce ✨</h1>
         <div>
