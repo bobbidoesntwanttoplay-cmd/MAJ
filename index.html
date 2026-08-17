@@ -23,20 +23,21 @@
             position: relative;
         }
         
-        /* Cố định hoa văn ở 2 góc, ép chiều rộng và chiều cao bằng nhau để không bị méo dọc */
+        /* Ghim các thẻ ảnh hoa văn đã xoay ngang vào 4 góc */
         .corner-img {
             position: fixed;
-            width: 380px;  /* Đặt cứng chiều rộng */
-            height: 380px; /* Đặt cứng chiều cao bằng chiều rộng để ảnh vuông vắn chuẩn tỉ lệ */
-            object-fit: contain; /* Giữ nguyên hình dáng hoa văn, không bị bóp méo */
-            pointer-events: none; 
-            z-index: 1; 
-            mix-blend-mode: multiply; /* Tự động khử nền trắng, chỉ giữ lại nét hoa văn */
+            width: 450px;  /* Tăng chiều rộng để hoa văn trải rộng ở góc */
+            height: auto;  /* Tự động điều chỉnh chiều cao theo tỉ lệ ảnh gốc đã xoay ngang */
+            pointer-events: none; /* Không cản trở click chuột */
+            z-index: 1; /* Nằm dưới hộp chữ */
+            mix-blend-mode: multiply; /* Tự động lọc nền trắng, giữ nét hoa văn */
         }
         
-        /* Chỉ đặt ở 2 góc trên (hoặc bạn muốn đổi góc nào tùy thích) */
-        .top-left { top: 0; left: 0; }
-        .top-right { top: 0; right: 0; transform: scaleX(-1); } /* Lật đối xứng sang góc phải */
+        /* Căn chỉnh 4 góc, xoay chiều cho chuẩn */
+        .top-left { top: 0; left: 0; transform: rotate(-90deg) scaleX(-1); transform-origin: top left; }
+        .top-right { top: 0; right: 0; transform: rotate(90deg); transform-origin: top right; }
+        .bottom-left { bottom: 0; left: 0; transform: rotate(-90deg); transform-origin: bottom left; }
+        .bottom-right { bottom: 0; right: 0; transform: rotate(90deg) scaleX(-1); transform-origin: bottom right; }
 
         /* Hộp chứa nội dung chính ở giữa */
         .container {
@@ -80,9 +81,11 @@
     </style>
 </head>
 <body>
-    <!-- Chỉ để hoa văn ở 2 góc (trái và phải) -->
-    <img src="download-removebg-preview.png" class="corner-img top-left" alt="">
-    <img src="download-removebg-preview.png" class="corner-img top-right" alt="">
+    <!-- 4 góc hoa văn, thay tên file trong src bằng tên file bạn vừa xoay ngang -->
+    <img src="hoavan_ngang.png" class="corner-img top-left" alt="">
+    <img src="hoavan_ngang.png" class="corner-img top-right" alt="">
+    <img src="hoavan_ngang.png" class="corner-img bottom-left" alt="">
+    <img src="hoavan_ngang.png" class="corner-img bottom-right" alt="">
 
     <div class="container">
         <h1>✨ MY CHAOS PLACE ✨</h1>
