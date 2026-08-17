@@ -14,7 +14,7 @@
         }
         .container {
             background: #fff8e7;
-            /* Dùng ảnh download.jfif làm viền khung */
+            /* Khung hoa văn từ file download.jfif */
             border-image-source: url('download.jfif');
             border-image-slice: 60 fill; 
             border-image-width: 60px;
@@ -25,24 +25,39 @@
             width: 70%;
             min-height: 300px;
         }
-        h1 { color: #4a2e15; letter-spacing: 3px; }
+        h1 { 
+            color: #4a2e15; 
+            letter-spacing: 3px; 
+            text-shadow: 2px 2px #ffffff;
+        }
+        p {
+            color: #5c3a1e;
+            font-size: 18px;
+        }
         .btn-folder {
             display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
+            margin: 15px;
+            padding: 12px 25px;
             background: #4a2e15;
             color: #fff8e7;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
         }
+        .btn-folder:hover {
+            background: #5c3a1e;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>✨ mY cHAoS plAce ✨</h1>
+        
+        <!-- Nút bấm chuyển sang trang Memories -->
         <div style="margin: 30px 0;">
-            <a href="memories.html" class="btn-folder">📁Memories Section</a>
+            <a href="memories.html" class="btn-folder">📁 Memories Section</a>
+        </div>
+        
     </div>
 </body>
 </html>
