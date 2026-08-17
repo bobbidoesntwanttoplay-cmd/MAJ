@@ -2,14 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>✨ MY FUCKING SPACE ✨</title>
+    <title> MY FUCKING SPACE </title>
     <!-- Nhập chuẩn 2 phông từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
     
     <style>
         body {
-            /* Đổi background tổng thể thành mã màu #40040e chuẩn vibe */
-            background-color: #40040e;
+            /* Ép cứng màu background tổng thể bằng mã màu rượu vang #40040e */
+            background-color: #40040e !important;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -20,17 +20,18 @@
             position: relative;
         }
         
-        /* Cái khung ở giữa: Giữ nguyên ảnh Lilies.jfif làm nền khung, viền nâu bọc ngoài */
+        /* Khung ở giữa: Đã tăng chiều rộng (max-width và padding) cho thoáng đãng, đỡ bị tù */
         .container {
             background-image: url('Lilies.jfif');
             background-size: cover;
             background-position: center;
             border: 4px solid #4a2e15; 
             border-radius: 12px;
-            padding: 55px 75px;
+            padding: 55px 110px; /* Tăng khoảng đệm sang hai bên để khung dài rộng hơn */
             text-align: center;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-            max-width: 580px;
+            width: 650px;       /* Cố định chiều rộng lớn hơn cho thoáng */
+            max-width: 90vw;
             z-index: 10;
             position: relative;
         }
@@ -54,7 +55,7 @@
         h1 { 
             font-family: 'Playfair Display', serif !important;
             color: #4a2e15;
-            font-size: 32px; 
+            font-size: 34px; 
             margin-top: 0;
             margin-bottom: 25px;
             letter-spacing: 2px;
@@ -66,7 +67,7 @@
             font-family: 'Great Vibes', cursive !important;
             display: inline-block;
             margin: 15px 0 5px 0;
-            padding: 12px 30px;
+            padding: 12px 35px;
             background-color: #4a2e15;
             color: #fff8e7;
             text-decoration: none;
