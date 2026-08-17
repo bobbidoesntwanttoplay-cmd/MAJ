@@ -2,11 +2,12 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>✨ MY FUCKING SPACE ✨</title>
-    <!-- Phông chữ uốn lượn, bay bổng Great Vibes -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title> MY FUCKING SPACE </title>
+    <!-- Nhập cả 2 phông: Great Vibes (cho nút) và Playfair Display (cho tiêu đề to rõ, sang trọng) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
     
     <style>
+        /* Mặc định toàn trang dùng phông bay bổng Great Vibes */
         * {
             font-family: 'Great Vibes', cursive !important;
         }
@@ -66,12 +67,15 @@
             z-index: 2;
         }
         
+        /* Riêng chữ tiêu đề to đổi sang phông Playfair Display sang trọng, dễ đọc */
         h1 { 
+            font-family: 'Playfair Display', serif !important;
             color: #4a2e15;
-            font-size: 42px; 
+            font-size: 30px; 
             margin-top: 0;
             margin-bottom: 25px;
             letter-spacing: 2px;
+            font-weight: 600;
         }
         
         .btn-folder {
@@ -83,7 +87,7 @@
             text-decoration: none;
             border: 2px solid #4a2e15;
             border-radius: 6px;
-            font-size: 24px; 
+            font-size: 24px; /* Phông bay bổng giữ ở nút bấm cho mềm mại */
             letter-spacing: 1px;
             transition: all 0.3s ease;
         }
