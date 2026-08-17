@@ -3,75 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>MY FUCKING BLOG - Pixel Edition</title>
-    
-    <!-- 🌟 Nhập font Pixel từ Google Fonts -->
+    <!-- Nhập font Pixel chuẩn Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    
     <style>
+        /* ÉP TOÀN BỘ TRANG WEB DÙNG FONT PIXEL */
+        * {
+            font-family: 'PressStart2P', 'Press Start 2P', monospace !important;
+        }
+
         body {
-            /* 🌟 PHẦN QUAN TRỌNG: Frame hoa văn làm nền body */
-            background-image: url('download.jfif'); /* Giữ nguyên tên file ảnh của bạn */
-            background-size: cover; /* Phủ kín màn hình, không bị bóp méo */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Nền cố định khi cuộn trang */
-            
-            /* 🌟 PHẦN QUAN TRỌNG: Font chữ Pixel */
-            font-family: 'Press Start 2P', cursive; 
-            
-            text-align: center;
-            color: #4a2e15; /* Màu chữ nâu trầm */
+            background-color: #0abab5; /* Nền xanh Tiffany */
             margin: 0;
             padding: 0;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        /* Hộp chứa nội dung trong suốt để lộ hình nền hoa văn */
         .container {
-            background: rgba(255, 248, 231, 0.87); /* Nền kem trong suốt 87% */
-            border: 4px solid #4a2e15; /* Viền nét liền đậm */
-            padding: 50px;
-            margin: 0 auto;
-            width: 65%;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            /* Sử dụng ảnh khung mới chuẩn tỷ lệ */
+            border-image-source: url('t4aZ4Lh.png');
+            border-image-slice: 50 50 50 50;
+            border-image-width: 50px;
+            border-image-repeat: round;
             
-            /* Căn giữa nội dung trên màn hình */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            background-color: #FFFFFF; 
+            padding: 50px;
+            width: 70vw;
+            max-width: 800px;
+            text-align: center;
+            color: #4a2e15;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
         
         h1 { 
             color: #4a2e15;
-            text-shadow: 3px 3px #0abab5; /* Bóng đổ màu xanh Tiffany */
-            letter-spacing: 2px;
-            font-size: 28px;
+            text-shadow: 2px 2px #0abab5;
+            font-size: 20px; /* Chữ pixel to cần chỉnh nhỏ lại chút cho cân đối */
             margin-top: 0;
+            margin-bottom: 25px;
         }
         
         p {
             color: #5c3a1e;
-            font-size: 14px; /* Font pixel hơi to nên chỉnh nhỏ lại */
-            line-height: 1.8;
+            font-size: 10px; /* Cỡ chữ nhỏ cho đúng chất pixel game */
+            line-height: 2;
         }
         
         .btn-folder {
             display: inline-block;
-            margin: 20px 0;
-            padding: 15px 30px;
-            background: #4a2e15;
-            color: #fff8e7;
+            margin: 25px 0;
+            padding: 12px 20px;
+            background-color: #4a2e15;
+            color: #FFFFFF;
             text-decoration: none;
-            border: 4px solid #5c3a1e;
-            font-family: 'Press Start 2P', cursive; /* Font pixel cho nút */
-            font-size: 12px;
+            border: 3px solid #5c3a1e;
+            font-size: 9px;
             text-transform: uppercase;
         }
         
         .btn-folder:hover {
-            background: #fff8e7;
+            background-color: #FFFFFF;
             color: #4a2e15;
             border-color: #4a2e15;
         }
