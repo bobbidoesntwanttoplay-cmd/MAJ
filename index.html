@@ -23,10 +23,22 @@
             position: relative;
         }
         
+        /* Lớp phủ để làm tối nhẹ nền xanh, giúp hộp nội dung nổi hơn */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); /* Phủ đen 10% */
+            z-index: -1;
+        }
+        
         /* Đặt các góc hoa văn cố định ở 4 góc màn hình */
         .corner-decor {
             position: fixed;
-            width: 320px; /* Điều chỉnh kích thước hoa văn ở góc */
+            width: 400px; /* Điều chỉnh kích thước hoa văn ở góc cho phù hợp */
             pointer-events: none; /* Không cản trở click chuột */
             z-index: 1;
         }
@@ -78,7 +90,7 @@
     </style>
 </head>
 <body>
-    <!-- 4 góc hoa văn được ghim chặt -->
+    <!-- 4 góc hoa văn được ghim chặt, nằm dưới lớp nội dung -->
     <img src="download.jfif" class="corner-decor top-left" alt="">
     <img src="download.jfif" class="corner-decor top-right" alt="">
     <img src="download.jfif" class="corner-decor bottom-left" alt="">
