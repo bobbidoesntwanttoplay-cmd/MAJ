@@ -8,11 +8,8 @@
     
     <style>
         body {
-            /* 1. Background tổng thể màn hình là islamic Pattern Wallpaper.jfif */
-            background-image: url('islamic Pattern Wallpaper.jfif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            /* Đổi background tổng thể thành mã màu #40040e chuẩn vibe */
+            background-color: #40040e;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -22,17 +19,8 @@
             overflow: hidden;
             position: relative;
         }
-
-        /* Lớp phủ tối nhẹ cho background tổng thể */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0, 0, 0, 0.45);
-            z-index: 1;
-        }
         
-        /* 2. Cái khung ở giữa: Dùng ảnh Lilies.jfif làm nền khung, có viền nâu bao ngoài */
+        /* Cái khung ở giữa: Giữ nguyên ảnh Lilies.jfif làm nền khung, viền nâu bọc ngoài */
         .container {
             background-image: url('Lilies.jfif');
             background-size: cover;
@@ -62,7 +50,7 @@
             z-index: 2;
         }
         
-        /* BẮT BUỘC ĐỔI: Tiêu đề to dùng phông Playfair Display, ép thẳng tay bằng !important */
+        /* Tiêu đề to dùng phông Playfair Display */
         h1 { 
             font-family: 'Playfair Display', serif !important;
             color: #4a2e15;
