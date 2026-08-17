@@ -11,22 +11,14 @@
         }
 
         body {
-            /* 🌟 PHẦN QUAN TRỌNG: Nền xanh Tiffany và 4 góc hoa văn */
+            /* Nền xanh Tiffany chuẩn cho toàn bộ trang */
             background-color: #0abab5;
             
-            /* Chỉ định 4 ảnh riêng biệt cho 4 góc */
-            background-image: url('download.jfif'), url('download.jfif'), url('download.jfif'), url('download.jfif');
-            
-            /* Căn chỉnh vị trí: top-left, top-right, bottom-left, bottom-right */
+            /* Ghép file ảnh trong suốt vào 4 góc màn hình */
+            background-image: url('hoavan.png'), url('hoavan.png'), url('hoavan.png'), url('hoavan.png');
             background-position: top left, top right, bottom left, bottom right;
-            
-            /* Không lặp lại ảnh */
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-            
-            /* Kích thước hoa văn ở mỗi góc (tùy chỉnh cho vừa vặn) */
             background-size: 380px auto;
-            
-            /* Cố định nền khi cuộn trang */
             background-attachment: fixed;
             
             margin: 0;
@@ -35,7 +27,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Tránh cuộn thừa */
+            overflow: hidden;
         }
         
         /* Hộp chứa nội dung chính ở giữa */
@@ -47,12 +39,12 @@
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
-            z-index: 10; /* Đảm bảo hộp nội dung luôn nổi trên hoa văn */
+            z-index: 10;
         }
         
         h1 { 
             color: #4a2e15;
-            text-shadow: 2px 2px #0abab5; /* Bóng đổ màu xanh Tiffany */
+            text-shadow: 2px 2px #0abab5;
             font-size: 18px;
             margin-top: 0;
             margin-bottom: 25px;
@@ -70,7 +62,6 @@
             border-radius: 6px;
             font-size: 9px;
             text-transform: uppercase;
-            transition: all 0.3s;
         }
         
         .btn-folder:hover {
@@ -82,7 +73,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>✨ mY cHAoS plAce ✨</h1>
+        <h1>✨MY CHAOS PLACE✨</h1>
         <div>
             <a href="memories.html" class="btn-folder">📁 Memories Section</a>
         </div>
