@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>✨ mY cHAoS plAce ✨</title>
+    <title>✨MY FUCKING BLOG✨</title>
     <!-- Nhập font Pixel chuẩn từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
@@ -11,16 +11,8 @@
         }
 
         body {
-            /* Đặt màu nền xanh Tiffany làm gốc tuyệt đối cho toàn trang */
+            /* Nền xanh Tiffany chuẩn tuyệt đối cho toàn trang */
             background-color: #0abab5;
-            
-            /* Dùng nhiều lớp background: Đặt hoa văn vào đúng 4 góc màn hình, phần giữa để trống lộ nền xanh */
-            background-image: url('download.jfif'), url('download.jfif'), url('download.jfif'), url('download.jfif');
-            background-position: top left, top right, bottom left, bottom right;
-            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-            background-size: 380px auto; /* Kích thước hoa văn ở mỗi góc */
-            background-attachment: fixed;
-            
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -28,8 +20,22 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         
+        /* Đặt các góc hoa văn cố định ở 4 góc màn hình */
+        .corner-decor {
+            position: fixed;
+            width: 320px; /* Điều chỉnh kích thước hoa văn ở góc */
+            pointer-events: none; /* Không cản trở click chuột */
+            z-index: 1;
+        }
+        
+        .top-left { top: 0; left: 0; }
+        .top-right { top: 0; right: 0; transform: scaleX(-1); } /* Lật đối xứng cho đẹp */
+        .bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
+        .bottom-right { bottom: 0; right: 0; transform: scale(-1, -1); }
+
         /* Hộp chứa nội dung chính ở giữa */
         .container {
             background-color: #fff8e7; /* Màu kem retro */
@@ -39,7 +45,7 @@
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
-            z-index: 10;
+            z-index: 10; /* Nằm trên lớp hoa văn */
         }
         
         h1 { 
@@ -72,6 +78,12 @@
     </style>
 </head>
 <body>
+    <!-- 4 góc hoa văn được ghim chặt -->
+    <img src="download.jfif" class="corner-decor top-left" alt="">
+    <img src="download.jfif" class="corner-decor top-right" alt="">
+    <img src="download.jfif" class="corner-decor bottom-left" alt="">
+    <img src="download.jfif" class="corner-decor bottom-right" alt="">
+
     <div class="container">
         <h1>✨ mY cHAoS plAce ✨</h1>
         <div>
