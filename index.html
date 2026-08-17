@@ -2,12 +2,16 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>✨MY FUCKING SPACE✨</title>
+    <title>MY FUCKING SPACE/title>
+    <!-- Nhập font Pixel chuẩn từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        * { font-family: 'Press Start 2P', monospace !important; }
+        * {
+            font-family: 'Press Start 2P', monospace !important;
+        }
 
         body {
+            /* Nền xanh Tiffany chuẩn tuyệt đối */
             background-color: #0abab5;
             margin: 0;
             padding: 0;
@@ -19,22 +23,42 @@
             position: relative;
         }
         
-        /* 🌟 PHẦN MỚI: Phóng to và ghim 1 ảnh duy nhất làm khung */
-        .full-frame-bg {
+        /* Cấu hình chung cho hoa văn ở 4 góc */
+        .corner-img {
             position: fixed;
-            top: -5%; /* Căn chỉnh lùi ra ngoài một chút để tràn viền đẹp hơn */
-            left: -5%;
-            width: 110%;  /* Phóng to ảnh vượt quá kích thước màn hình */
-            height: 110%;
-            object-fit: fill; /* Ép ảnh kéo dãn kín toàn bộ màn hình (dùng cho ảnh gốc có sẵn khung) */
-            pointer-events: none; 
-            z-index: 1; /* Nằm trên nền xanh nhưng dưới hộp nội dung */
-            /* opacity: 0.7; */ /* Có thể chỉnh độ mờ nếu muốn hoa văn nhạt bớt */
+            width: 420px;  /* Kích thước hoa văn ở mỗi góc, thích to nhỏ có thể tăng giảm số này */
+            height: auto;
+            pointer-events: none; /* Không cản trở click chuột */
+            z-index: 1; /* Nằm dưới hộp nội dung */
+            /* Nếu ảnh nền tối mà chìm quá, bật dòng filter dưới đây lên để nó thành màu trắng sáng cho nổi: */
+            /* filter: invert(100%) brightness(200%); */
+        }
+        
+        /* Xoay và lật đối xứng chuẩn cho từng góc */
+        .top-left { 
+            top: 0; 
+            left: 0; 
+        }
+        .top-right { 
+            top: 0; 
+            right: 0; 
+            transform: scaleX(-1); /* Lật ngược ngang cho góc phải */
+        } 
+        .bottom-left { 
+            bottom: 0; 
+            left: 0; 
+            transform: scaleY(-1); /* Lật ngược dọc cho góc dưới */
+        } 
+        .bottom-right { 
+            bottom: 0; 
+            right: 0; 
+            transform: scale(-1, -1); /* Lật cả ngang lẫn dọc cho góc dưới bên phải */
         }
 
+        /* Hộp chứa nội dung chính ở giữa */
         .container {
-            background-color: #fff8e7;
-            border: 3px solid #4a2e15;
+            background-color: #fff8e7; /* Màu kem retro */
+            border: 3px solid #4a2e15; /* Viền nâu đậm */
             border-radius: 12px;
             padding: 40px 60px;
             text-align: center;
@@ -64,11 +88,20 @@
             font-size: 9px;
             text-transform: uppercase;
         }
+        
+        .btn-folder:hover {
+            background-color: #fff8e7;
+            color: #4a2e15;
+            border-color: #4a2e15;
+        }
     </style>
 </head>
 <body>
-    <!-- 🌟 Thêm thẻ ảnh duy nhất này vào, nằm trên cùng trong body -->
-    <img src="image_2026-08-17_174206260-removebg-preview.png" class="full-frame-bg" alt="">
+    <!-- Gắn đúng tên file ảnh mới tách nền của bạn vào 4 góc -->
+    <img src="download_1-removebg-preview.png" class="corner-img top-left" alt="">
+    <img src="download_1-removebg-preview.png" class="corner-img top-right" alt="">
+    <img src="download_1-removebg-preview.png" class="corner-img bottom-left" alt="">
+    <img src="download_1-removebg-preview.png" class="corner-img bottom-right" alt="">
 
     <div class="container">
         <h1>✨ MY CHAOS PLACE ✨</h1>
