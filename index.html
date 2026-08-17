@@ -2,50 +2,78 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>MY FUCKING BLOG</title>
+    <title>MY FUCKING BLOG - Pixel Edition</title>
+    
+    <!-- 🌟 Nhập font Pixel từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            background-color: #0abab5;
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            color: #4a2e15;
-            margin: 0;
-            padding: 40px;
-        }
-        .container {
-            background: #fff8e7;
-            /* Khung hoa văn từ file download.jfif */
-            border-image-source: url('download.jfif');
-            border-image-slice: 60 fill; 
-            border-image-width: 60px;
-            border-image-outset: 20px;
+            /* 🌟 PHẦN QUAN TRỌNG: Frame hoa văn làm nền body */
+            background-image: url('download.jfif'); /* Giữ nguyên tên file ảnh của bạn */
+            background-size: cover; /* Phủ kín màn hình, không bị bóp méo */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Nền cố định khi cuộn trang */
             
-            padding: 40px;
-            margin: 50px auto;
-            width: 70%;
-            min-height: 300px;
+            /* 🌟 PHẦN QUAN TRỌNG: Font chữ Pixel */
+            font-family: 'Press Start 2P', cursive; 
+            
+            text-align: center;
+            color: #4a2e15; /* Màu chữ nâu trầm */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
         }
+        
+        /* Hộp chứa nội dung trong suốt để lộ hình nền hoa văn */
+        .container {
+            background: rgba(255, 248, 231, 0.87); /* Nền kem trong suốt 87% */
+            border: 4px solid #4a2e15; /* Viền nét liền đậm */
+            padding: 50px;
+            margin: 0 auto;
+            width: 65%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            
+            /* Căn giữa nội dung trên màn hình */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
         h1 { 
-            color: #4a2e15; 
-            letter-spacing: 3px; 
-            text-shadow: 2px 2px #ffffff;
+            color: #4a2e15;
+            text-shadow: 3px 3px #0abab5; /* Bóng đổ màu xanh Tiffany */
+            letter-spacing: 2px;
+            font-size: 28px;
+            margin-top: 0;
         }
+        
         p {
             color: #5c3a1e;
-            font-size: 18px;
+            font-size: 14px; /* Font pixel hơi to nên chỉnh nhỏ lại */
+            line-height: 1.8;
         }
+        
         .btn-folder {
             display: inline-block;
-            margin: 15px;
-            padding: 12px 25px;
+            margin: 20px 0;
+            padding: 15px 30px;
             background: #4a2e15;
             color: #fff8e7;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            border: 4px solid #5c3a1e;
+            font-family: 'Press Start 2P', cursive; /* Font pixel cho nút */
+            font-size: 12px;
+            text-transform: uppercase;
         }
+        
         .btn-folder:hover {
-            background: #5c3a1e;
+            background: #fff8e7;
+            color: #4a2e15;
+            border-color: #4a2e15;
         }
     </style>
 </head>
@@ -53,11 +81,10 @@
     <div class="container">
         <h1>✨ mY cHAoS plAce ✨</h1>
         
-        <!-- Nút bấm chuyển sang trang Memories -->
-        <div style="margin: 30px 0;">
+        <div>
             <a href="memories.html" class="btn-folder">📁 Memories Section</a>
         </div>
-        
+
     </div>
 </body>
 </html>
