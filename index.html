@@ -11,12 +11,14 @@
         }
 
         body {
-            /* Nền xanh Tiffany và đặt ảnh hoa văn ở 4 góc */
+            /* Đặt màu nền xanh Tiffany làm gốc tuyệt đối cho toàn trang */
             background-color: #0abab5;
-            background-image: url('download.jfif');
-            background-repeat: no-repeat;
+            
+            /* Dùng nhiều lớp background: Đặt hoa văn vào đúng 4 góc màn hình, phần giữa để trống lộ nền xanh */
+            background-image: url('download.jfif'), url('download.jfif'), url('download.jfif'), url('download.jfif');
             background-position: top left, top right, bottom left, bottom right;
-            background-size: 350px auto; /* Tự động căn chỉnh kích thước hoa văn ở các góc */
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-size: 380px auto; /* Kích thước hoa văn ở mỗi góc */
             background-attachment: fixed;
             
             margin: 0;
@@ -25,6 +27,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
         
         /* Hộp chứa nội dung chính ở giữa */
@@ -36,6 +39,7 @@
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
+            z-index: 10;
         }
         
         h1 { 
