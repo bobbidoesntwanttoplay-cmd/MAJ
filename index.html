@@ -9,35 +9,40 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             color: #4a2e15;
+            margin: 0;
+            padding: 40px;
         }
         .container {
             background: #fff8e7;
-            border: 5px dashed #4a2e15;
-            padding: 30px;
+            /* Dùng ảnh download.jfif làm viền khung */
+            border-image-source: url('download.jfif');
+            border-image-slice: 60 fill; 
+            border-image-width: 60px;
+            border-image-outset: 20px;
+            
+            padding: 40px;
             margin: 50px auto;
-            width: 80%;
-            border-radius: 20px;
+            width: 70%;
+            min-height: 300px;
         }
-        h1 { 
-            color: #4a2e15;
-            text-shadow: 2px 2px #ffffff; 
-            letter-spacing: 2px;
-        }
-        p {
-            color: #5c3a1e;
-            font-size: 18px;
-        }
-        img {
-            border: 3px solid #4a2e15;
-            width: 300px;
-            margin: 15px;
-            border-radius: 10px;
+        h1 { color: #4a2e15; letter-spacing: 3px; }
+        .btn-folder {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #4a2e15;
+            color: #fff8e7;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✨ mY cHAoS plAce ✨</h1>   
+        <h1>✨ mY cHAoS plAce ✨</h1>
+        <div style="margin: 30px 0;">
+            <a href="memories.html" class="btn-folder">📁Memories Section</a>
     </div>
 </body>
 </html>
