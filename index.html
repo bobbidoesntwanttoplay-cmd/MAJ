@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>MY FUCKING SPACE/title>
+    <title> MY FUCKING SPACE </title>
     <!-- Nhập font Pixel chuẩn từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
@@ -26,12 +26,10 @@
         /* Cấu hình chung cho hoa văn ở 4 góc */
         .corner-img {
             position: fixed;
-            width: 420px;  /* Kích thước hoa văn ở mỗi góc, thích to nhỏ có thể tăng giảm số này */
+            width: 420px;  /* Kích thước hoa văn ở mỗi góc */
             height: auto;
             pointer-events: none; /* Không cản trở click chuột */
             z-index: 1; /* Nằm dưới hộp nội dung */
-            /* Nếu ảnh nền tối mà chìm quá, bật dòng filter dưới đây lên để nó thành màu trắng sáng cho nổi: */
-            /* filter: invert(100%) brightness(200%); */
         }
         
         /* Xoay và lật đối xứng chuẩn cho từng góc */
@@ -42,17 +40,17 @@
         .top-right { 
             top: 0; 
             right: 0; 
-            transform: scaleX(-1); /* Lật ngược ngang cho góc phải */
+            transform: scaleX(-1); 
         } 
         .bottom-left { 
             bottom: 0; 
             left: 0; 
-            transform: scaleY(-1); /* Lật ngược dọc cho góc dưới */
+            transform: scaleY(-1); 
         } 
         .bottom-right { 
             bottom: 0; 
             right: 0; 
-            transform: scale(-1, -1); /* Lật cả ngang lẫn dọc cho góc dưới bên phải */
+            transform: scale(-1, -1); 
         }
 
         /* Hộp chứa nội dung chính ở giữa */
@@ -97,7 +95,7 @@
     </style>
 </head>
 <body>
-    <!-- Gắn đúng tên file ảnh mới tách nền của bạn vào 4 góc -->
+    <!-- Gắn đúng tên file ảnh mới của bạn vào 4 góc -->
     <img src="download_1-removebg-preview.png" class="corner-img top-left" alt="">
     <img src="download_1-removebg-preview.png" class="corner-img top-right" alt="">
     <img src="download_1-removebg-preview.png" class="corner-img bottom-left" alt="">
