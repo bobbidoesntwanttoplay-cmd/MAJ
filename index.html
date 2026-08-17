@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title> MY FUCKING SPACE </title>
-    <!-- Nhập font Pixel chuẩn từ Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Nhập phông Ozelot (hoặc fallback về serif độc đáo) -->
     <style>
+        @font-face {
+            font-family: 'Ozelot';
+            src: url('Ozelot.ttf') format('truetype'); /* Nếu bạn có file font Ozelot.ttf tải lên chung thư mục, nó sẽ nhận diện ngay */
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
-            font-family: 'Press Start 2P', monospace !important;
+            font-family: 'Ozelot', serif !important; /* Đổi tất cả chữ thành phông Ozelot */
         }
 
         body {
-            /* Nền xanh Tiffany chuẩn tuyệt đối */
+            /* Nền xanh Tiffany chủ đạo của trang */
             background-color: #0abab5;
             margin: 0;
             padding: 0;
@@ -23,84 +29,67 @@
             position: relative;
         }
         
-        /* Cấu hình chung cho hoa văn ở 4 góc */
-        .corner-img {
-            position: fixed;
-            width: 420px;  /* Kích thước hoa văn ở mỗi góc */
-            height: auto;
-            pointer-events: none; /* Không cản trở click chuột */
-            z-index: 1; /* Nằm dưới hộp nội dung */
-        }
-        
-        /* Xoay và lật đối xứng chuẩn cho từng góc */
-        .top-left { 
-            top: 0; 
-            left: 0; 
-        }
-        .top-right { 
-            top: 0; 
-            right: 0; 
-            transform: scaleX(-1); 
-        } 
-        .bottom-left { 
-            bottom: 0; 
-            left: 0; 
-            transform: scaleY(-1); 
-        } 
-        .bottom-right { 
-            bottom: 0; 
-            right: 0; 
-            transform: scale(-1, -1); 
+        /* Hộp chứa nội dung chính ở giữa, dùng ảnh Lilies.jfif làm background */
+        .container {
+            background-image: url('Lilies.jfif');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #4a2e15; /* Viền nâu đậm tạo khung retro */
+            border-radius: 12px;
+            padding: 50px 70px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            max-width: 550px;
+            z-index: 10;
+            position: relative;
         }
 
-        /* Hộp chứa nội dung chính ở giữa */
-        .container {
-            background-color: #fff8e7; /* Màu kem retro */
-            border: 3px solid #4a2e15; /* Viền nâu đậm */
-            border-radius: 12px;
-            padding: 40px 60px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
-            z-index: 10; /* Nằm trên cùng để bấm được nút */
+        /* Thêm một lớp phủ mờ nhẹ trên nền ảnh để chữ hiển thị rõ nét và dễ đọc hơn */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(255, 248, 231, 0.85); /* Lớp nền kem hơi trong suốt che bớt ảnh nền phía sau */
+            border-radius: 9px;
+            z-index: 1;
+        }
+
+        /* Đưa chữ và nút nổi lên trên lớp phủ */
+        .container > * {
+            position: relative;
+            z-index: 2;
         }
         
         h1 { 
             color: #4a2e15;
-            text-shadow: 2px 2px #0abab5;
-            font-size: 18px;
+            font-size: 24px;
             margin-top: 0;
             margin-bottom: 25px;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .btn-folder {
             display: inline-block;
             margin: 15px 0 5px 0;
-            padding: 12px 20px;
+            padding: 12px 24px;
             background-color: #4a2e15;
             color: #fff8e7;
             text-decoration: none;
-            border: 2px solid #5c3a1e;
+            border: 2px solid #4a2e15;
             border-radius: 6px;
-            font-size: 9px;
+            font-size: 14px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .btn-folder:hover {
             background-color: #fff8e7;
             color: #4a2e15;
-            border-color: #4a2e15;
         }
     </style>
 </head>
 <body>
-    <!-- Gắn đúng tên file ảnh mới của bạn vào 4 góc -->
-    <img src="download_1-removebg-preview.png" class="corner-img top-left" alt="">
-    <img src="download_1-removebg-preview.png" class="corner-img top-right" alt="">
-    <img src="download_1-removebg-preview.png" class="corner-img bottom-left" alt="">
-    <img src="download_1-removebg-preview.png" class="corner-img bottom-right" alt="">
-
     <div class="container">
         <h1>✨ MY CHAOS PLACE ✨</h1>
         <div>
