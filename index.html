@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>MY FUCKING SPACE</title>
-    <!-- Nhập font Pixel chuẩn từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        * {
-            font-family: 'Press Start 2P', monospace !important;
-        }
+        * { font-family: 'Press Start 2P', monospace !important; }
 
         body {
-            /* Nền xanh Tiffany chuẩn tuyệt đối */
             background-color: #0abab5;
             margin: 0;
             padding: 0;
@@ -23,69 +19,57 @@
             position: relative;
         }
         
-        /* Ghim các thẻ ảnh hoa văn đã xoay ngang vào 4 góc */
+        /* Chỉnh tỉ lệ cho ảnh ngang hiển thị chuẩn ở 4 góc */
         .corner-img {
             position: fixed;
-            width: 450px;  /* Tăng chiều rộng để hoa văn trải rộng ở góc */
-            height: auto;  /* Tự động điều chỉnh chiều cao theo tỉ lệ ảnh gốc đã xoay ngang */
-            pointer-events: none; /* Không cản trở click chuột */
-            z-index: 1; /* Nằm dưới hộp chữ */
-            mix-blend-mode: multiply; /* Tự động lọc nền trắng, giữ nét hoa văn */
+            width: 400px;  /* Chiều rộng hoa văn */
+            height: auto;
+            pointer-events: none;
+            z-index: 1;
         }
         
-        /* Căn chỉnh 4 góc, xoay chiều cho chuẩn */
-        .top-left { top: 0; left: 0; transform: rotate(-90deg) scaleX(-1); transform-origin: top left; }
-        .top-right { top: 0; right: 0; transform: rotate(90deg); transform-origin: top right; }
-        .bottom-left { bottom: 0; left: 0; transform: rotate(-90deg); transform-origin: bottom left; }
-        .bottom-right { bottom: 0; right: 0; transform: rotate(90deg) scaleX(-1); transform-origin: bottom right; }
+        /* Căn chỉnh 4 góc cho ảnh ngang */
+        .top-left { top: 0; left: 0; }
+        .top-right { top: 0; right: 0; transform: scaleX(-1); }
+        .bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
+        .bottom-right { bottom: 0; right: 0; transform: scale(-1, -1); }
 
-        /* Hộp chứa nội dung chính ở giữa */
         .container {
-            background-color: #fff8e7; /* Màu kem retro */
-            border: 3px solid #4a2e15; /* Viền nâu đậm */
+            background-color: #fff8e7;
+            border: 3px solid #4a2e15;
             border-radius: 12px;
             padding: 40px 60px;
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
-            z-index: 10; 
+            z-index: 10;
         }
         
         h1 { 
             color: #4a2e15;
             text-shadow: 2px 2px #0abab5;
             font-size: 18px;
-            margin-top: 0;
             margin-bottom: 25px;
-            letter-spacing: 1px;
         }
         
         .btn-folder {
             display: inline-block;
-            margin: 15px 0 5px 0;
             padding: 12px 20px;
             background-color: #4a2e15;
             color: #fff8e7;
             text-decoration: none;
-            border: 2px solid #5c3a1e;
             border-radius: 6px;
             font-size: 9px;
             text-transform: uppercase;
         }
-        
-        .btn-folder:hover {
-            background-color: #fff8e7;
-            color: #4a2e15;
-            border-color: #4a2e15;
-        }
     </style>
 </head>
 <body>
-    <!-- 4 góc hoa văn, thay tên file trong src bằng tên file bạn vừa xoay ngang -->
-    <img src="hoavan_ngang.png" class="corner-img top-left" alt="">
-    <img src="hoavan_ngang.png" class="corner-img top-right" alt="">
-    <img src="hoavan_ngang.png" class="corner-img bottom-left" alt="">
-    <img src="hoavan_ngang.png" class="corner-img bottom-right" alt="">
+    <!-- Dùng đúng tên file mới của bạn -->
+    <img src="image_2026-08-17_174206260-removebg-preview.png" class="corner-img top-left" alt="">
+    <img src="image_2026-08-17_174206260-removebg-preview.png" class="corner-img top-right" alt="">
+    <img src="image_2026-08-17_174206260-removebg-preview.png" class="corner-img bottom-left" alt="">
+    <img src="image_2026-08-17_174206260-removebg-preview.png" class="corner-img bottom-right" alt="">
 
     <div class="container">
         <h1>✨ MY CHAOS PLACE ✨</h1>
