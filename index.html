@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title> MY FUCKING SPACE </title>
+    <!-- Nhập phông chữ uốn lượn, bay bổng Great Vibes từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    
     <style>
-        @font-face {
-            font-family: 'Ozelot';
-            src: url('Ozelot.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
+        /* Áp dụng phông chữ bay bổng cho toàn bộ trang */
         * {
-            font-family: 'Ozelot', serif !important;
+            font-family: 'Great Vibes', cursive !important;
         }
 
         body {
-            /* Dùng ảnh Lilies.jfif làm nền toàn màn hình */
-            background-image: url('Lilies.jfif');
+            /* Lấy file ảnh mới làm hình nền toàn màn hình */
+            background-image: url('islamic Pattern Wallpaper.jfif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -30,62 +27,78 @@
             overflow: hidden;
             position: relative;
         }
-        
-        /* Lớp phủ tối nhẹ để ảnh nền chìm xuống một chút, làm nổi bật khung chữ trắng */
+
+        /* Lớp phủ tối nhẹ trên nền để khung chữ ở giữa nổi bật và dễ nhìn hơn */
         body::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4); 
+            background-color: rgba(0, 0, 0, 0.45);
             z-index: 1;
         }
-
-        /* Hộp chứa nội dung ở giữa trong suốt hoặc tối màu nhẹ cho hợp vibe */
+        
+        /* Hộp chứa nội dung chính ở giữa (giữ nguyên khung hoa ly và viền nâu chuẩn đẹp) */
         .container {
-            background-color: rgba(20, 20, 20, 0.75); /* Nền hộp tối mờ sang trọng */
-            border: 2px solid rgba(255, 255, 255, 0.4); /* Viền trắng mảnh */
+            background-image: url('Lilies.jfif');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #4a2e15; 
             border-radius: 12px;
             padding: 50px 70px;
             text-align: center;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             max-width: 550px;
             z-index: 10;
+            position: relative;
+        }
+
+        /* Lớp phủ sáng cho khung chứa để thấy rõ ảnh hoa ly phía sau chữ */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(255, 248, 231, 0.82); 
+            border-radius: 9px;
+            z-index: 1;
+        }
+
+        .container > * {
+            position: relative;
+            z-index: 2;
         }
         
         h1 { 
-            color: #ffffff; /* Chữ màu trắng */
-            font-size: 24px;
+            color: #4a2e15;
+            font-size: 38px; /* Tăng kích thước chút vì phông bay bổng nét sẽ mảnh hơn */
             margin-top: 0;
             margin-bottom: 25px;
             letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
         .btn-folder {
             display: inline-block;
             margin: 15px 0 5px 0;
-            padding: 12px 24px;
-            background-color: transparent;
-            color: #ffffff; /* Chữ nút màu trắng */
+            padding: 12px 28px;
+            background-color: #4a2e15;
+            color: #fff8e7;
             text-decoration: none;
-            border: 2px solid #ffffff; /* Viền nút trắng */
+            border: 2px solid #4a2e15;
             border-radius: 6px;
-            font-size: 14px;
-            text-transform: uppercase;
+            font-size: 22px; /* Phông chữ bay bổng cần to hơn một chút cho dễ đọc */
             letter-spacing: 1px;
             transition: all 0.3s ease;
         }
         
         .btn-folder:hover {
-            background-color: #ffffff;
-            color: #000000; /* Hover đổi ngược lại cho nổi */
+            background-color: #fff8e7;
+            color: #4a2e15;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✨ MY CHAOS PLACE ✨</h1>
+        <h1> MY CHAOS PLACE </h1>
         <div>
             <a href="memories.html" class="btn-folder">📁 Memories Section</a>
         </div>
